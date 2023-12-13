@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: #f7f4e9; /* Antique white background */
+            font-family: 'Georgia', serif; /* Serif font for a classic feel */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #6b4935; /* Dark brown text color */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-color: #e0d5bf; /* Light brown background for the header */
+        }
+    </style>
+</head>
+<body>
+    <form method="post" >
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
